@@ -11,7 +11,7 @@ def get_base64_image(image_path):
     with open(image_path, "rb") as img_file:
         return base64.b64encode(img_file.read()).decode()
 
-image = "D:/projects/devposts/brave.png"
+image = "brave.png"
 background_image = get_base64_image(image)
 
 background = f'''
