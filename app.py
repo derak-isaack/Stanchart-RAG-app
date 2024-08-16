@@ -4,6 +4,7 @@ from haystack.components.embedders import SentenceTransformersTextEmbedder
 from haystack_integrations.document_stores.opensearch import OpenSearchDocumentStore
 import streamlit as st
 import base64 
+from sentence_transformers import SentenceTransformer
 
 st.set_page_config("Standard-Chartered🏦 CHATGPT", layout="wide")
 
