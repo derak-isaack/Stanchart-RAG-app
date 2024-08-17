@@ -44,7 +44,7 @@ query_pipeline.add_component("retriever", OpenSearchEmbeddingRetriever(document_
 query_pipeline.connect("text_embedder.embedding", "retriever.query_embedding")
 
 
-st.title("StanChart CHATGPT")
+st.title("2023 StanChart Report CHATGPT")
 query = st.text_input("Enter your query:")
 
 if query:
