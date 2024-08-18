@@ -7,10 +7,11 @@ from haystack_integrations.components.retrievers.chroma import ChromaQueryTextRe
 
 import streamlit as st 
 from langchain_community.document_loaders import PyMuPDFLoader
-import sqlite3 
+import sqlite3, os 
 
 
 st.set_page_config("Stanchart RAG application", layout="wide")
+os.environ['PROTOCOL_BUFFERS_PYTHON_IMPLEMENTATION'] = 'python'
 
 document_store = ChromaDocumentStore(persist_path="chroma.sqlite3")
 
