@@ -47,15 +47,14 @@ query_pipeline.connect("text_embedder.embedding", "retriever.query_embedding")
 st.title("2023 StanChart Report CHATGPT")
 query = st.text_input("Enter your query:")
 
-if query:
-    result = query_pipeline.run({"text_embedder": {"text": query}})
+
+result = query_pipeline.run({"text_embedder": {"text": query}})
     
-    if result['retriever']['documents']:
-        doc = result['retriever']['documents'][0]
+if result['retriever']['documents']:
+    doc = result['retriever']['documents'][0]
         
-        with st.container(border=True):
-            st.write("**Top Document Result:**")
-            st.write(f"**Page Content:** {doc.content}")
-            st.write(f"**Metadata:** {doc.meta}")
-    else:
-        st.write("No results found.")
+    with st.container(border=True):
+        st.write("**Top Document Result:**")
+        st.write(f"**Page Content:** {doc.content}")
+        st.write(f"**Metadata:** {doc.meta}")
+    
