@@ -12,7 +12,7 @@ import sqlite3
 
 st.set_page_config("Stanchart RAG application", layout="wide")
 
-document_store = ChromaDocumentStore(persist_path=".")
+document_store = ChromaDocumentStore(persist_path="chroma.sqlite3")
 
 def connect():
     conn = sqlite3.connect("chroma.sqlite3")
