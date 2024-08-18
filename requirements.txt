@@ -8,3 +8,5 @@ fastapi==0.112.0
 transformers==4.44.0
 chroma-haystack==0.21.1
 chromadb==0.5.5
+protobuf==3.20.3
+
